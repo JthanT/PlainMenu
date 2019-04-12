@@ -3,21 +3,23 @@ import { StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import HomeMenu from './screens/HomeMenu.js'
-import ProfileMenu from './screens/ProfileMenu.js'
+import LoginMenu from './screens/LoginMenu.js'
 
 
 export default class App extends React.Component {
   render() {
     return (
-      <StackNavigation />
+      <AppContainer />
     );
   }
 }
 
-const StackNavigation = createStackNavigator({
-  Home: HomeMenu,
-  Profile: ProfileMenu
+const AppNavigator = createStackNavigator({
+  Home: { screen: HomeMenu },
+  Login: { screen: LoginMenu }
 });
+
+const AppContainer = createAppContainer(AppNavigator);
 
 const styles = StyleSheet.create({
   container: {

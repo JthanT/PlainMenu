@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-class HomeMenu extends Component {
+class LoginMenu extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>HomeMenu</Text>
+        <Text>LoginMenu</Text>
       </View>
     );
   }
 }
 
-export default HomeMenu;
+export default LoginMenu;
 
 const styles = StyleSheet.create({
   container: {
