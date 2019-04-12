@@ -1,7 +1,9 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import ProfileMenu from './ProfileMenu.js'
+import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-export default class App extends React.Component {
+export default class LoginScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -17,11 +19,29 @@ export default class App extends React.Component {
           style={styles.input}
           placeholder="Password"
         />
-        <Text style={styles.createAcount}>Create Account</Text>
+        <Button 
+          style={styles.createAcount}
+          title="Create Account"
+          onPress={() => this.props.navigation.navigate('Profile')}
+        />
       </View>
     );
   }
 }
+
+class Profile extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <ProfileMenu />
+      </View>
+    );
+  }
+}
+
+const Navigation = createStackNavigator({
+  Profile: {screen: ProfileMenu}
+});
 
 const styles = StyleSheet.create({
   container: {
