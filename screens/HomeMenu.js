@@ -1,18 +1,17 @@
 import React from 'react';
-import { Button, Image, StyleSheet, View } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 
-export default class ProfileMenu extends React.Component {
+export default class HomeMenu extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image 
-          style={styles.image}
-          source={require('./profile_picture_symbol.jpg')}
-        />
-        
         <Button 
-          style={styles.logout}
-          title="Log out"
+          style={styles.login}
+          title="Login"
+        />
+        <Button 
+          style={styles.create}
+          title="Create Account"
         />
       </View>
     );
@@ -26,12 +25,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  image: {
+  login: {
     width: 100,
     height: 100
   },
-  logout: {
-    fontSize: 10,
-    margin: 30,
+  create: {
+    width: 100,
+    height: 100
   }
 });
