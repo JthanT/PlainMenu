@@ -16,7 +16,12 @@ export default class App extends React.Component {
 
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeMenu },
-  Login: { screen: LoginMenu }
+  Login: { screen: LoginMenu },
+},
+{
+  defaultNavigationOptions: {
+    header: null,
+  },
 });
 
 const AppContainer = createAppContainer(AppNavigator);
