@@ -9,6 +9,10 @@ class HomeMenu extends Component {
           title = "Login"
           onPress = { () => this.props.navigation.navigate('Login') }
         />
+        <Button
+          title = "Create Account"
+          onPress = { () => this.props.navigation.navigate('Create') }
+        />
       </View>
     );
   }

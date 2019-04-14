@@ -4,6 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import HomeMenu from './screens/HomeMenu.js'
 import LoginMenu from './screens/LoginMenu.js'
+import CreateMenu from './screens/CreateMenu.js'
 
 
 export default class App extends React.Component {
@@ -17,6 +18,7 @@ export default class App extends React.Component {
 const AppNavigator = createStackNavigator({
   Home: { screen: HomeMenu },
   Login: { screen: LoginMenu },
+  Create: { screen: CreateMenu },
 },
 {
   defaultNavigationOptions: {

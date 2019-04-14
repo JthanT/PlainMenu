@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-class LoginMenu extends Component {
+class CreateMenu extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>LoginMenu</Text>
-        <Button
-          title = "Logout"
-          onPress = { () => this.props.navigation.navigate('Home')}
-        />
+        <Text>CreateMenu</Text>
       </View>
     );
   }
 }
 
-export default LoginMenu;
+export default CreateMenu;
 
 const styles = StyleSheet.create({
   container: {
