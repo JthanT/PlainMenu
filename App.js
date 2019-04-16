@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet} from 'react-native';
+import { AsyncStorage, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import HomeMenu from './screens/HomeMenu.js'
@@ -16,14 +16,18 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = createStackNavigator({
-  Home: { screen: HomeMenu },
-  Login: { screen: LoginMenu },
-  Create: { screen: CreateMenu },
-},
-{
-  defaultNavigationOptions: {
-    header: null,
+  Home: { 
+    screen: HomeMenu,
+    navigationOptions: {
+      header: null,
+    },
   },
+  Login: { 
+    screen: LoginMenu,
+  },
+  Create: {
+    screen: CreateMenu,
+  },  
 });
 
 const AppContainer = createAppContainer(AppNavigator);
