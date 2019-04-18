@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-class CreateMenu extends Component {
+class ProfileMenu extends Component {
   render() {
     return (
       <View style = {styles.container}>
-        <Text>CreateMenu</Text>
+        <Text>ProfileMenu</Text>
       </View>
     );
   }
 }
 
-export default CreateMenu;
+export default ProfileMenu;
 
 const styles = StyleSheet.create({
   container: {

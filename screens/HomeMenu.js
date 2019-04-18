@@ -4,14 +4,14 @@ import { Button, StyleSheet, View } from 'react-native';
 class HomeMenu extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style = {styles.container}>
         <Button
           title = "Login"
-          onPress = { () => this.props.navigation.navigate('Login') }
+          onPress = {() => this.props.navigation.navigate('Login')}
         />
         <Button
           title = "Create Account"
-          onPress = { () => this.props.navigation.navigate('Create') }
+          onPress = {() => this.props.navigation.navigate('Create')}
         />
       </View>
     );

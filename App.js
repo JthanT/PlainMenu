@@ -1,10 +1,11 @@
 import React from 'react';
-import { AsyncStorage, StyleSheet} from 'react-native';
+import { StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
+import CreateMenu from './screens/CreateMenu.js'
 import HomeMenu from './screens/HomeMenu.js'
 import LoginMenu from './screens/LoginMenu.js'
-import CreateMenu from './screens/CreateMenu.js'
+import ProfileMenu from './screens/ProfileMenu.js'
 
 
 export default class App extends React.Component {
@@ -27,7 +28,10 @@ const AppNavigator = createStackNavigator({
   },
   Create: {
     screen: CreateMenu,
-  },  
+  },
+  Profile: {
+    screen: ProfileMenu,
+  },
 });
 
 const AppContainer = createAppContainer(AppNavigator);
