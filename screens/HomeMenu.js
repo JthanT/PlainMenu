@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 class HomeMenu extends Component {
   render() {
     return (
       <View style = {styles.container}>
-        <Button
-          title = "Login"
+        <TouchableOpacity
+          style = {styles.button}
           onPress = {() => this.props.navigation.navigate('Login')}
-        />
-        <Button
-          title = "Create Account"
+        >
+          <Text style = {styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style = {styles.button}
           onPress = {() => this.props.navigation.navigate('Create')}
-        />
+        >
+          <Text style = {styles.buttonText}>Create Account</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -26,5 +30,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#cfe5fd',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+  button: {
+    margin: 40,
+  },
+  buttonText: {
+    color: '#000000',
+    fontSize: 25,
+  },
 });
