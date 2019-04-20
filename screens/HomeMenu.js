@@ -28,14 +28,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#cfe5fd',
-    alignItems: 'center',
     justifyContent: 'center',
   },
   button: {
-    margin: 40,
+    backgroundColor: '#467df0',
+    margin: 25,
+    padding: 10,
   },
   buttonText: {
-    color: '#000000',
+    color: '#ffffff',
     fontSize: 25,
+    textAlign: 'center',
   },
 });

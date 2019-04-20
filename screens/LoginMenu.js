@@ -54,20 +54,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#cfe5fd',
-    justifyContent: 'center',
   },
   usernameText: {
     fontSize: 17,
     marginLeft: 20,
+    marginTop: 20
   },
   passwordText: {
     fontSize: 17,
     marginLeft: 20,
   },
   input: {
-    margin: 15,
-    height: 50,
+    marginTop: 15,
+    marginLeft: 20,
+    marginRight: 20,
     marginBottom: 50,
+    height: 50,
     fontSize: 20,
     borderBottomWidth: 1,
   },
